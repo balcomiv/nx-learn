@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "projects": {
+    "seed-app": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/seed-app",
+      "sourceRoot": "apps/seed-app/src",
+      "prefix": "nx-seed",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/seed-app",
+            "index": "apps/seed-app/src/index.html",
+            "main": "apps/seed-app/src/main.ts",
+            "polyfills": "apps/seed-app/src/polyfills.ts",
+            "tsConfig": "apps/seed-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/seed-app/src/favicon.ico",
+              "apps/seed-app/src/assets"
+            ],
+            "styles": ["apps/seed-app/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/seed-app/src/environments/environment.ts",
+                  "with": "apps/seed-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "seed-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "seed-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "seed-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/seed-app/tsconfig.app.json",
+              "apps/seed-app/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/seed-app/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/seed-app/jest.config.js",
+            "tsConfig": "apps/seed-app/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/seed-app/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "seed-app-e2e": {
+      "root": "apps/seed-app-e2e",
+      "sourceRoot": "apps/seed-app-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/seed-app-e2e/cypress.json",
+            "tsConfig": "apps/seed-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "seed-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "seed-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/seed-app-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/seed-app-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "seed-app"
+}
