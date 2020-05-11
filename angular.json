@@ -123,6 +123,41 @@
           }
         }
       }
+    },
+    "gothinkster-angular-directives": {
+      "projectType": "library",
+      "root": "libs/gothinkster/angular-directives",
+      "sourceRoot": "libs/gothinkster/angular-directives/src",
+      "prefix": "nx-seed",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/gothinkster/angular-directives/tsconfig.lib.json",
+              "libs/gothinkster/angular-directives/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/gothinkster/angular-directives/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/gothinkster/angular-directives/jest.config.js",
+            "tsConfig": "libs/gothinkster/angular-directives/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/gothinkster/angular-directives/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

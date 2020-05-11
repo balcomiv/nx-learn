@@ -44,4 +44,7 @@ Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 
 ## Helpful Commands
 - npx create-nx-workspace@latest 
-- 
+- ng add @nrwl/angular
+- ng g lib gothinkster/angular-directives --style=scss
+
+- ng g c test --project=gothinkster-angular-directives --dry-run

@@ -25,6 +25,9 @@
     "seed-app-e2e": {
       "tags": [],
       "implicitDependencies": ["seed-app"]
+    },
+    "gothinkster-angular-directives": {
+      "tags": []
     }
   }
 }

@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-seed/gothinkster/angular-directives": [
+        "libs/gothinkster/angular-directives/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
