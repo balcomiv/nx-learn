@@ -57,7 +57,8 @@ Misc Learning Links
 - ng add @nrwl/angular
 - ng g lib gothinkster/angular-directives --style=scss
 
-- ng g c test --project=gothinkster-angular-directives --dry-run
+- ng g c ui/test --project=gothinkster-angular-directives --dry-run
+- ng g c ui/smoke-test --project=gothinkster-angular-directives --dry-run
 
 ## Storybook Commands
 
@@ -65,5 +66,7 @@ Misc Learning Links
 - ng g @nrwl/angular:storybook-configuration quick-filters
 - ng generate @nrwl/angular:stories --name=quick-filters --generateCypressSpecs
 
+- ng g c smoke-test --project=gothinkster/angular-directives --dry-run
+- ng g c smoke-test --project=material-schematics --dry-run
 
 ng g lib material/schematics --style=scss --dry-run
