@@ -42,9 +42,25 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
 
+https://nx.dev/angular/examples/react-and-angular
+
+https://duncanhunter.gitbook.io/enterprise-angular-applications-with-ngrx-and-nx
+
+Gothinkster Links
+- Sharing best practices and expert advice: https://lookout.dev
+
+Misc Learning Links
+- https://www.samanthaming.com/tidbits/
+
 ## Helpful Commands
 - npx create-nx-workspace@latest 
 - ng add @nrwl/angular
 - ng g lib gothinkster/angular-directives --style=scss
 
 - ng g c test --project=gothinkster-angular-directives --dry-run
+
+## Storybook Commands
+- 
+
+
+ng g lib material/schematics --style=scss --dry-run

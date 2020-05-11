@@ -28,6 +28,9 @@
     },
     "gothinkster-angular-directives": {
       "tags": []
+    },
+    "material-schematics": {
+      "tags": []
     }
   }
 }

@@ -18,7 +18,8 @@
     "paths": {
       "@nx-seed/gothinkster/angular-directives": [
         "libs/gothinkster/angular-directives/src/index.ts"
-      ]
+      ],
+      "@nx-seed/material/schematics": ["libs/material/schematics/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

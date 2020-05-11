@@ -158,6 +158,38 @@
           "style": "scss"
         }
       }
+    },
+    "material-schematics": {
+      "projectType": "library",
+      "root": "libs/material/schematics",
+      "sourceRoot": "libs/material/schematics/src",
+      "prefix": "nx-seed",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/material/schematics/tsconfig.lib.json",
+              "libs/material/schematics/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/material/schematics/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/material/schematics/jest.config.js",
+            "tsConfig": "libs/material/schematics/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/material/schematics/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
