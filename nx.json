@@ -39,6 +39,12 @@
     },
     "material-schematics": {
       "tags": []
+    },
+    "gothinkster-angular-directives-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "gothinkster-angular-directives"
+      ]
     }
   }
 }

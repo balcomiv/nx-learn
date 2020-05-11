@@ -25,7 +25,9 @@
               "apps/seed-app/src/favicon.ico",
               "apps/seed-app/src/assets"
             ],
-            "styles": ["apps/seed-app/src/styles.scss"],
+            "styles": [
+              "apps/seed-app/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -83,7 +85,10 @@
               "apps/seed-app/tsconfig.app.json",
               "apps/seed-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/seed-app/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/seed-app/**"
+            ]
           }
         },
         "test": {
@@ -118,8 +123,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/seed-app-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/seed-app-e2e/**"]
+            "tsConfig": [
+              "apps/seed-app-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/seed-app-e2e/**"
+            ]
           }
         }
       }
@@ -151,6 +161,36 @@
             "passWithNoTests": true,
             "setupFile": "libs/gothinkster/angular-directives/src/test-setup.ts"
           }
+        },
+        "storybook": {
+          "builder": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/gothinkster/angular-directives/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "outputPath": "dist/storybook/gothinkster-angular-directives",
+            "config": {
+              "configFolder": "libs/gothinkster/angular-directives/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
         }
       },
       "schematics": {
@@ -172,7 +212,10 @@
               "libs/material/schematics/tsconfig.lib.json",
               "libs/material/schematics/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/material/schematics/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/material/schematics/**"
+            ]
           }
         },
         "test": {
@@ -188,6 +231,38 @@
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
+        }
+      }
+    },
+    "gothinkster-angular-directives-e2e": {
+      "root": "apps/gothinkster-angular-directives-e2e",
+      "sourceRoot": "apps/gothinkster-angular-directives-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/gothinkster-angular-directives-e2e/cypress.json",
+            "tsConfig": "apps/gothinkster-angular-directives-e2e/tsconfig.e2e.json",
+            "devServerTarget": "gothinkster-angular-directives:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "gothinkster-angular-directives:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/gothinkster-angular-directives-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/gothinkster-angular-directives-e2e/**"
+            ]
+          }
         }
       }
     }
