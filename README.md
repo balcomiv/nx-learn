@@ -74,3 +74,13 @@ Misc Learning Links
 - ng g c smoke-test --project=material-schematics --dry-run
 
 - ng g lib material/schematics --style=scss --dry-run
+
+
+## Misc
+- https://github.com/nrwl/nx/issues/2382 (storybook auto-gen app issue)
+- http://issuehub.io/?label[]=scope%3A+storybook
+
+
+ng g @nrwl/angular:storybook-configuration seed-app --generate-stories --configure-cypress --generateCypressSpecs --force --dry-run
+
+ng generate @nrwl/angular:stories --name=seed-app --generateCypressSpecs --dry-run
