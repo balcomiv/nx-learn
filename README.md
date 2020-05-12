@@ -73,4 +73,4 @@ Misc Learning Links
 - ng g c smoke-test --project=gothinkster/angular-directives --dry-run
 - ng g c smoke-test --project=material-schematics --dry-run
 
-ng g lib material/schematics --style=scss --dry-run
+- ng g lib material/schematics --style=scss --dry-run
