@@ -45,6 +45,12 @@
       "implicitDependencies": [
         "gothinkster-angular-directives"
       ]
+    },
+    "material-schematics-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "material-schematics"
+      ]
     }
   }
 }

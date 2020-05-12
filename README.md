@@ -66,7 +66,9 @@ Misc Learning Links
 
 - ng g @nrwl/angular:storybook-configuration gothinkster-angular-directives --generate-stories --configure-cypress --generateCypressSpecs
 
-- ng generate @nrwl/angular:stories --name=gothinkster-angular-directives --generateCypressSpecs
+- ng g @nrwl/angular:storybook-configuration material-schematics --generate-stories --configure-cypress --generateCypressSpecs
+
+- ng generate @nrwl/angular:stories --name=material-schematics --generateCypressSpecs
 
 - ng g c smoke-test --project=gothinkster/angular-directives --dry-run
 - ng g c smoke-test --project=material-schematics --dry-run
