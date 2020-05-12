@@ -25,9 +25,7 @@
               "apps/seed-app/src/favicon.ico",
               "apps/seed-app/src/assets"
             ],
-            "styles": [
-              "apps/seed-app/src/styles.scss"
-            ],
+            "styles": ["apps/seed-app/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -85,10 +83,7 @@
               "apps/seed-app/tsconfig.app.json",
               "apps/seed-app/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/seed-app/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/seed-app/**"]
           }
         },
         "test": {
@@ -123,13 +118,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/seed-app-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/seed-app-e2e/**"
-            ]
+            "tsConfig": ["apps/seed-app-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/seed-app-e2e/**"]
           }
         }
       }
@@ -212,10 +202,7 @@
               "libs/material/schematics/tsconfig.lib.json",
               "libs/material/schematics/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/material/schematics/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/material/schematics/**"]
           }
         },
         "test": {
@@ -317,14 +304,44 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/material-schematics-e2e/tsconfig.e2e.json"
-            ],
+            "tsConfig": ["apps/material-schematics-e2e/tsconfig.e2e.json"],
             "exclude": [
               "**/node_modules/**",
               "!apps/material-schematics-e2e/**"
             ]
           }
+        }
+      }
+    },
+    "linkedin-cypress": {
+      "projectType": "library",
+      "root": "libs/linkedin/cypress",
+      "sourceRoot": "libs/linkedin/cypress/src",
+      "prefix": "nx-seed",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/linkedin/cypress/tsconfig.lib.json",
+              "libs/linkedin/cypress/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/linkedin/cypress/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/linkedin/cypress/jest.config.js",
+            "tsConfig": "libs/linkedin/cypress/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/linkedin/cypress/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
         }
       }
     }
