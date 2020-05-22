@@ -52,6 +52,12 @@ Gothinkster Links
 Misc Learning Links
 - https://www.samanthaming.com/tidbits/
 
+## Adding Angular Material to NX
+- npm install @angular/material @angular/cdk @angular/flex-layout @angular/animations 
+- import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+- Go explore flex layout docs https://tburleson-layouts-demos.firebaseapp.com/#/docs 
+
+
 ## Helpful Commands
 - npx create-nx-workspace@latest 
 - ng add @nrwl/angular
