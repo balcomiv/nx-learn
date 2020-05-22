@@ -60,6 +60,9 @@ Misc Learning Links
 - ng g c ui/smoke-test --project=gothinkster-angular-directives --dry-run
 - ng g c ui/smoke-test --project=material-schematics --dry-run
 
+## Material Commands
+- npm install @angular/material @angular/cdk @angular/flex-layout @angular/animations
+
 ## Storybook Commands
 
 - ng add @nrwl/storybook
