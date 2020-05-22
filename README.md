@@ -74,7 +74,7 @@ Misc Learning Links
 - ng g lib material/schematics --style=scss --dry-run
 
 - cd libs/publishable/misc/src/lib
-- ng g @angular/material:address-form ui/example-address-form --dry-run
+- ng g @angular/material:address-form ui/example-address-form --style=scss --dry-run
 - cd ../../../../../
 
 ## Material Commands
