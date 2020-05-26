@@ -48,6 +48,10 @@ https://duncanhunter.gitbook.io/enterprise-angular-applications-with-ngrx-and-nx
 
 - Sharing best practices and expert advice: https://lookout.dev
 
+## Gothinkster Helpful Commands
+
+- ng g d directive/definition --project=gothinkster-angular-directives --dry-run
+
 ## Misc Learning Links
 
 - https://www.samanthaming.com/tidbits/
