@@ -44,11 +44,11 @@ https://nx.dev/angular/examples/react-and-angular
 
 https://duncanhunter.gitbook.io/enterprise-angular-applications-with-ngrx-and-nx
 
-Gothinkster Links
+## Gothinkster Links
 
 - Sharing best practices and expert advice: https://lookout.dev
 
-Misc Learning Links
+## Misc Learning Links
 
 - https://www.samanthaming.com/tidbits/
 
@@ -68,12 +68,10 @@ Misc Learning Links
 
 ## Generation Commands
 
-- ng g c ui/smoke-test --project=gothinkster-angular-directives --dry-run
 - ng g c ui/smoke-test --project=material-schematics --dry-run
-
 - ng g lib material/schematics --style=scss --dry-run
 
-- cd libs/publishable/misc/src/lib
+- cd libs/material/schematics/src/lib
 - ng g @angular/material:address-form ui/example-address-form --style=scss --dry-run
 - cd ../../../../../
 
@@ -92,6 +90,16 @@ Misc Learning Links
 - https://github.com/nrwl/nx/issues/2382 (storybook auto-gen app issue)
 - http://issuehub.io/?label[]=scope%3A+storybook
 
-ng g @nrwl/angular:storybook-configuration seed-app --generate-stories --configure-cypress --generateCypressSpecs --force --dry-run
+## Storybook Builder
 
-ng generate @nrwl/angular:stories --name=seed-app --generateCypressSpecs --dry-run
+- https://github.com/nrwl/nx/pull/1582/files
+
+## Storybook Info
+
+- https://medium.com/storybookjs/declarative-storybook-configuration-49912f77b78
+- https://medium.com/tensult/angular-material-custom-theme-implementation-in-angular-6-d424a2a47e4c
+- https://stackoverflow.com/questions/53377419/how-to-add-global-style-to-angular-6-7-library
+
+## Storybook Angular Links
+
+- https://killalldefects.com/2020/02/09/test-angular-components-in-storybook/

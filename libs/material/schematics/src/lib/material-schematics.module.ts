@@ -7,9 +7,19 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RootComponent } from './root/root.component';
 
 @NgModule({
-  imports: [CommonModule, MatInputModule, MatButtonModule, MatSelectModule, MatRadioModule, MatCardModule, ReactiveFormsModule],
-  declarations: [ExampleAddressFormComponent]
+  imports: [
+    CommonModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    ReactiveFormsModule
+  ],
+  declarations: [ExampleAddressFormComponent, RootComponent],
+  exports: [RootComponent, ExampleAddressFormComponent]
 })
 export class MaterialSchematicsModule {}
