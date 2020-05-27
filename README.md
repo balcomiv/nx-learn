@@ -52,6 +52,8 @@ https://duncanhunter.gitbook.io/enterprise-angular-applications-with-ngrx-and-nx
 
 - ng g d directives/definition --project=gothinkster-angular-directives --dry-run
 
+- ng g d directives/hello-world --project=gothinkster-angular-directives --flat=false --dry-run
+
 ## Misc Learning Links
 
 - https://www.samanthaming.com/tidbits/
