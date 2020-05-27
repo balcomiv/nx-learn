@@ -50,7 +50,7 @@ https://duncanhunter.gitbook.io/enterprise-angular-applications-with-ngrx-and-nx
 
 ## Gothinkster Helpful Commands
 
-- ng g d directive/definition --project=gothinkster-angular-directives --dry-run
+- ng g d directives/definition --project=gothinkster-angular-directives --dry-run
 
 ## Misc Learning Links
 
