@@ -17,3 +17,5 @@ Run `nx test gothinkster-angular-directives` to execute the unit tests.
 - https://stackblitz.com/edit/thinkster-directives-03-03-elementref-exercise-yshzys?file=src%2Fapp%2Fapp.component.ts
 
 - https://stackblitz.com/edit/thinkster-directives-03-05-renderer2-exercise-vkmpkp?file=src%2Fapp%2Fdirectives%2Fcolor.directive.ts
+
+- https://stackblitz.com/edit/thinkster-directives-03-08-actions-directive-exercise-vdrqtt?file=src%2Fapp%2Fdirectives%2Factions.directive.ts
