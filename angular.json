@@ -348,6 +348,41 @@
           }
         }
       }
+    },
+    "gothinkster-reactive-forms": {
+      "projectType": "library",
+      "root": "libs/gothinkster/reactive-forms",
+      "sourceRoot": "libs/gothinkster/reactive-forms/src",
+      "prefix": "nx-seed",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/gothinkster/reactive-forms/tsconfig.lib.json",
+              "libs/gothinkster/reactive-forms/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/gothinkster/reactive-forms/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/gothinkster/reactive-forms/jest.config.js",
+            "tsConfig": "libs/gothinkster/reactive-forms/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/gothinkster/reactive-forms/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

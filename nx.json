@@ -30,9 +30,7 @@
     },
     "seed-app-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "seed-app"
-      ]
+      "implicitDependencies": ["seed-app"]
     },
     "gothinkster-angular-directives": {
       "tags": []
@@ -42,17 +40,16 @@
     },
     "gothinkster-angular-directives-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "gothinkster-angular-directives"
-      ]
+      "implicitDependencies": ["gothinkster-angular-directives"]
     },
     "material-schematics-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "material-schematics"
-      ]
+      "implicitDependencies": ["material-schematics"]
     },
     "linkedin-cypress": {
+      "tags": []
+    },
+    "gothinkster-reactive-forms": {
       "tags": []
     }
   }
